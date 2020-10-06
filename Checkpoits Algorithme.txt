@@ -1,0 +1,23 @@
+ALGORITHM CalculPhrase(String phrase)
+Var
+Nbmots :Integer :=0 ;
+Nbcaracters : Integer :=0 ;
+Nbvowels : Inetger :=0 ;
+Count : Integer := 1 ;
+BEGIN
+REPEAT
+Nbcaracters := Nbcaracters +1 ;
+SWITCH (phrase[count]) DO
+CASE ‘A’ :  Nbvowels := Nbvowels+1 ;
+CASE ‘E’ :  Nbvowels := Nbvowels+1 ;
+CASE ‘I’ :  Nbvowels := Nbvowels+1 ;
+CASE ‘O’ :  Nbvowels := Nbvowels+1 ;
+CASE ‘U’ :  Nbvowels := Nbvowels+1 ;
+CASE ‘Y’ :  Nbvowels := Nbvowels+1 ;
+CASE ‘  ’ :  Nbmots := Nbmots +1 ;
+DEFAULT : Count= Count +1 ;
+UNTIL(phrase[count] NOT EQUAL ‘.’  )
+WHIRITE ( ‘La phrase : ‘ +phrase+’ Contient ‘+Nbmots +’mots.’)
+WHIRITE ( ‘La phrase : ‘ +phrase+’ Contient ‘+Nbcaracters  + ‘ lettres.‘)
+WHIRITE ( ‘La phrase : ‘ +phrase+’ Contient ‘+Nbvowels+ ‘ voyelles.‘)
+END.
